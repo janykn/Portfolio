@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Janykn Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f5e6b8a475.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Janardhan-2.png" alt="logo" class="logo" />
+                <ul id = "sidemenu">
+                    <li><a href = "#header">Home</a></li>
+                    <li><a href = "#about">About</a></li>
+                    <li><a href = "#services">Services</a></li>
+                    <li><a href = "#work">Work</a></li>
+                    <li><a href = "#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick = "closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick = "openmenu()"></i>
+            </nav>
+                <div class="header-text">
+                    <p>Full-Stack Java/.NET Developer</p>
+                    <h1>Hey, This is <span class="reddish">Janardhan</span> from <br/>Hyderabad, India</h1>
+                </div>
+        </div>
+    </div>
+    <!----------------------------------------------------- About ---------------------------------------->
+<div id="about">
+    <div id="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src = "images/about2.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class = "subtitle"><span class = "reddish">A</span>bout me</h1>
+                <p>MEAN, MERN Full Stack Developer experienced in developing interactive
+                    and live responsive web apps. Passionate to work and update skill grade with latest technology trends </p>
+                <div class="tab-titles">
+                    <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class = "tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class = "tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id = "skills">
+                    <ul>
+                        <li><span>Java/ASP .NET/Express.js/Django</span><br>Back-end Development</li>
+                        <li><span>React.js, Tailwind CSS</span><br>Front-end Development</li>
+                        <li><span>MySQL, MS-SQL Server, NoSQL(MongoDB), AWS RDS</span><br>Databases I've worked with</li>
+                        <li><span>Git, Docker, Jenkins, AWS(Ec2, EKS)</span><br>Continous Integration/Continous Deployment</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id = "experience">
+                    <ul>
+                        <li><span>2023 March - Present</span><br>Senior Full stack Developer at Wipro Technologies</li>
+                        <li><span>2022 Febraury-2023 March</span><br>Full Stack developer at Wipro Technologies</li>
+                        <li><span>2021 November-2022 Febraury</span><br>Software Engineer</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id = "education">
+                    <ul>
+                        <li><span>2017 August - 2021 August</span><br>Bachelor of Technology (Major in CSE) at MVGR College of Engineering</li>
+                        <li><span>2015 June - 2017 May</span><br>Intermediate in MPC(Maths, Physics and Chemistry) at Ascent Junior College</li>
+                        <li><span>2014 June - 2015 May</span><br>Secondary Schooling at SFS High School</li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------------------------------------------------- services ------------------------------------------------>
+
+<div id = "services">
+    <div class = "container">
+        <h1 class = "subtitle"><span class = "reddish">S</span>ervices</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-crop-simple fa-flip"></i>
+                <br/>
+                <h2>Front-end development</h2>
+                <p>"Explore our front-end development services for stunning website experiences. 
+                    We craft visually appealing, user-friendly designs to elevate your online presence.
+                     Let's bring your vision to life!"</p>
+                <a href = "#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-sharp fa-solid fa-code fa-flip"></i>
+                <br/>
+                <h2>Mobile App development</h2>
+                <p>"Unlock limitless possibilities with our cross-platform mobile app development using React Native! 🚀 Elevate your business with a stunning app starting at just 7999. Let's bring your vision to life together!"
+                </p>
+                <a href = "#">Learn More</a>
+            </div>
+
+            <div>
+                <i class="fa-brands fa-app-store fa-flip"></i>
+                <br/>
+                <h2>Portfolio Making</h2>
+                <p>"Explore our portfolio service! Get a stunning website + hosting on GoDaddy for 6 months at just 2999 rupees. Elevate your online presence today!"</p>
+                <a href = "#">Learn More</a>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+<!--------------------------------------- portfolio ------------------------------------>
+
+<div id="work">
+    <div class="container">
+        <h1 class = "subtitle"><span class = "reddish">W</span>ork</h1>
+        <div class="work-list">
+            <div class="work">
+                <img class = "work-pic" src = "images/worka4.jpg"/>
+                <div class="layer">
+                    <h2>Electric</h2>
+                    <h3>Dating Website that helps you to date new friends near you </h3>
+                    <p>Technologies Used: React, Spring Boot, MySQL, GraphQL</p>
+                    <a href = "#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img class = "work-pic" src = "images/worka1.jpg"/>
+                <div class="layer">
+                    <h2>Flexter</h2>
+                    <h3>App to connect with nearest gyms, trainers and Gym Supplement Stores</h3>
+                    <p>Technologies Used: React, Django, NoSQL, GraphQL</p>
+                    <a href = "#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img class = "work-pic" src = "images/woeka3.jpg"/>
+                <div class="layer">
+                    <h2>GoMarry.com</h2>
+                    <h3>App to order services for marriages, parties from nearest event organizers</h3>
+                    <p>Technologies Used: React Native, Django, , GraphQL</p>
+                    <a href = "#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href = "#" class = "btn">See more</a>
+    </div>
+</div>
+
+<!--------------------------------------------------------- Contact ----------------------------------------------------------------->
+<div id = "contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class = "subtitle"><span class = "reddish">C</span>ontact</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>   janardhanykunta616@gmail.com</p>
+                <p><i class="fa-solid fa-phone fa-shake"></i> +91-9398272406</p>
+                <div class="social-icons">
+                    <a href = "#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href = "#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href = "#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href = "#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <a href = "images/Resume.pdf" download class = "btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+               <form name = "submit-to-google-sheet">
+                <input type="text" id="name" name="name" placeholder = "Your Name" required><br><br>
+                <input type="email" id="email" name="email" placeholder = "Your Email" required><br><br>
+                <!-- <label for="message">Message:</label> -->
+                <textarea id="message" name="message" rows="4" placeholder = "Your Message" required></textarea><br><br>
+                <button type=""submit" class ="btn btn2">Submit</button>
+            </form>
+            <span id ="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p> Copyright &copy; 2023. Made with <i class="fa-solid fa-heart" style="color: #ff001f;"></i> by Janardhan Ykunta</p>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-190px";
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyaPd29DDNhBjK5s-5v2agEj5wtFJSz4umYNCPODHsugTYCiN_E6Ie1YfiVLjqLxWygsg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Thank you for your valuable response" 
+            setTimeout(function(){
+            msg.innerHTML=""
+        },5000)
+    form.reset()
+})
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+
+</html>
