@@ -4,481 +4,187 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/wolf.png" type="image/x-icon">
     <title>Janykn Portfolio</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/f5e6b8a475.js" crossorigin="anonymous"></script>
 <style>
-    *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Catamaran', sans-serif;
-    box-sizing: border-box;
-}
-html{
-    scroll-behavior: smooth;
-}
-
-body{
-    background: #080808;
-    color:#fff;
-}
-#header{
-    width: 100%;
-    height: 100vh;
-    background-image: url(images/bg3.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.intro{
-    display:flex;
-}
-.container{
-    padding:10px 10%;
-}
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.logo{
-    width:190px;
-    height:45px;
-}
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-}
-nav ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-}
-
-nav ul li a::after{
-    content: '';
-    width:0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left:0;
-    bottom:-6px;
-    transition: 0.5s;
-}
-
-nav ul li a:hover::after{
-    width:100%;
-}
-.header-text{
-    margin-top: 20%;
-    font-size: 30px;
-}
-.header-text h1{
-    font-size: 60px;
-    margin-top: 20px;
-}
-.reddish{
-    color: red;
-}
-
-/* --------------------------------------------------------------------------about------------------------------------------------------------- */
-#about{
-    padding: 80px;
-    color: #ababab;
-}
-.row{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.about-col-1{
-    flex-basis: 35%;
-}
-.about-col-1 img{
-    width:100%;
-    border-radius: 15px;
-}
-.about-col-2{
-    flex-basis: 60%;
-}
-.subtitle{
-    font-size: 60px;
-    font-weight: 600;
-    color:#fff;
-}
-.tab-titles{
-    display:flex;
-    margin: 20px 0 40px;
-}
-.tab-links{
-    margin-right:50px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
-}
-
-.tab-links::after{
-    content: '';
-    width:0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left:0;
-    bottom:-8px;
-    transition: 0.5s;
-}
-.tab-links.active-link::after{
-    width:50%;
-}
-
-.tab-contents ul li{
-    list-style: none;
-    margin:10px;
-}
-
-.tab-contents ul li span{
-    color: #b54769;
-    font-size: 14px;
-}
-.tab-contents{
-    display: none;
-}
-.tab-contents.active-tab{
-    display: block;
-}
-#msg{
-    color:#61b752;
-    margin-top:-40px;
-    display:block;
-
-}
-
-
-
-/* ------------------------------services------------------------------------- */
-#services{
-    padding:30px 0px;
-}
-.services-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-.services-list div{
-    background:#262626;
-    padding:40px;
-    font-weight:300;
-    border-radius: 15px;
-    transition: transform 0.5s; 
-}
-
-.services-list div i{
-    font-size: 50px;
-    padding: 10px;
-}
-.services-list div h2{
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-.services-list div a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
-}
-.services-list div:hover{
-    background: #ff004f;
-    transform:translateY(-15px);
-}
-/* portfolio */
-#portfolio{
-    padding: 50px 0;
-}
-.work-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-
-.work{
-    border-radius: 10px;
-    position:relative;
-    overflow:hidden;
-}
-
-.work img{
-    border-radius: 10px;
-    display:block;
-    width:100%;
-    transition: transform 0.5s;
-}
-.layer{
-    width:100%;
-    height:0;
-    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
-    border-radius:10px;
-    position: absolute;
-    left:0;
-    bottom:0;
-    overflow: hidden;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 14px;
-    transition: height 0.5s;
-}
-.layer h3{
-    font-weight:500;
-    /* margin-bottom:20px; */
-}
-.layer a{
-    margin-top: 20px;
-    color:#ff004f;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-}
-.work:hover img{
-    transform: scale(1.1);
-
-}
-.work:hover .layer{
-    height:100%;
-}
-.btn{
-    display:block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #ff004f;
-    padding:14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #fff;
-    transition: background 0.5s;
-}
-.btn:hover{
-    background-color: #ff004f;
-}
-
-/* ---------------------------------contact------------------------------------------------ */
-
-.contact-left{
-    flex-basis: 35%;
-}
-
-.contact-right{
-    flex-basis:60%;
-}
-
-.contact-left p{
-    margin-top: 30px;
-}
-.contact-left p i{
-    color:#ff004f;
-    margin-right: 15px;
-    font-size: 25px;
-}
-.social-icons{
-    margin-top:30px;
-}
-.social-icons a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color:#ababab;
-    display: inline-block;
-    transition: transform 0.5s;
-}
-.social-icons a:hover{
-    color:#ff004f;
-    transform: translateY(-5px);
-}
-.btn.btn2{
-    display: inline-block;
-    background: #ff004f;
-}
-
-.contact-right form{
-    width:100%;
-}
-form input, form textarea{
-    width:100%;
-    border:0;
-    outline:none;
-    background:#262626;
-    padding:15px;
-    margin:15px 0;
-    color:#fff;
-    font-size: 18px;
-    border-radius: 6px;
-}
-form .btn2{
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top:20px;
-    cursor:pointer;
-}
-.copyright{
-    width:100%;
-    text-align:center;
-    padding:25px 0;
-    /* background:#262626; */
-    font-weight: 300;
-    margin-top:20px;
-}
-
-/*-------------------------------------------------- Css for small screens --------------------------------------------------------*/
-nav .fa-solid{
-    display:none;
-}
-
-@media only screen and (max-width: 600px){
-    #header{
-        background-image: url(images/bgph1.jpg);
-    }
-    .header-text{
-        margin-top: 100%;
-        font-size: 16px;
-    }
-    .header-text h1{
-        font-size:30px;
-    }
-    nav .fa-solid{
-        display:block;
-        font-size: 25px;
-    }
-    nav ul{
-        background: #262626;
-        position: fixed;
-        top:0;
-        right: -190px;
-        width:190px;
-        height:100vh;
-        padding-top:50px;
-        z-index:2;
-        transition: right 0.5s;
-    }
-    nav ul li{
-        display:block;
-        margin:25px;
-    }
-    nav ul .fa-solid{
-        position: absolute;
-        top:25px;
-        left: 25px;
-        cursor: pointer;
-    }
-    .subtitle{
-        font-size:40px;
-    }
-    .about-col-1, .about-col-2{
-        flex-basis:100%;
-    }
-    .about-col-1{
-        margin-bottom:30px;
-    }
-    .about-col-2{
-        font-size: 14px;
-    }
-
-    .tab-links{
-        font-size:16px;
-        margin-right:20px;
-    }
-    .work, .services-list, .contact-left, .contact-right{
-        flex-basis: 100%;
-    }
-    .copyright{
-        font-size:14px;
-    }
-}
-
+   
 </style>
 </head>
 
-<body>
+<body><div class = "items">
     <div id="header">
+        <nav>
+            <a href = "#header"><img src="images/Janardhan-2.png" alt="logo" class="logo" /></a>
+            <ul id = "sidemenu">
+                <li><a href = "#header">Home</a></li>
+                <li><a href = "#about">About</a></li>
+                <li><a href = "#experience">Experience</a></li>
+                <li><a href = "#services">Services</a></li>
+                <li><a href = "#work">Projects</a></li>
+                <li><a href = "#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick = "closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick = "openmenu()"></i>
+        </nav>
         <div class="container">
-            <nav>
-                <img src="images/Janardhan-2.png" alt="logo" class="logo" />
-                <ul id = "sidemenu">
-                    <li><a href = "#header">Home</a></li>
-                    <li><a href = "#about">About</a></li>
-                    <li><a href = "#services">Services</a></li>
-                    <li><a href = "#work">Work</a></li>
-                    <li><a href = "#contact">Contact</a></li>
-                    <i class="fa-solid fa-xmark" onclick = "closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick = "openmenu()"></i>
-            </nav>
-                <div class="header-text">
-                    <p>Full-Stack Java/.NET Developer</p>
-                    <h1>Hey, This is <span class="reddish">Janardhan</span> from <br/>Hyderabad, India</h1>
+                <div class="heads">
+                    <div class="texts">
+                        <p>Full-Stack Java/.NET Developer</p>
+                        <h1>Hey, This is <span class="reddish">Janardhan</span> from<br/> Hyderabad, India</h1>
+                    </div>
+                    <!-- <div class="cards">
+                        <div class="content"><img src = "images/card4.jpg" alt = ""/></div>
+                    </div> -->
                 </div>
-        </div>
-    </div>
-    <!----------------------------------------------------- About ---------------------------------------->
-<div id="about">
-    <div id="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src = "images/about2.jpg">
-            </div>
-            <div class="about-col-2">
-                <h1 class = "subtitle"><span class = "reddish">A</span>bout me</h1>
-                <p>MEAN, MERN Full Stack Developer experienced in developing interactive
-                    and live responsive web apps. Passionate to work and update skill grade with latest technology trends </p>
-                <div class="tab-titles">
-                    <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class = "tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class = "tab-links" onclick="opentab('education')">Education</p>
-                </div>
-                <div class="tab-contents active-tab" id = "skills">
-                    <ul>
-                        <li><span>Java/ASP .NET/Express.js/Django</span><br>Back-end Development</li>
-                        <li><span>React.js, Tailwind CSS</span><br>Front-end Development</li>
-                        <li><span>MySQL, MS-SQL Server, NoSQL(MongoDB), AWS RDS</span><br>Databases I've worked with</li>
-                        <li><span>Git, Docker, Jenkins, AWS(Ec2, EKS)</span><br>Continous Integration/Continous Deployment</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id = "experience">
-                    <ul>
-                        <li><span>2023 March - Present</span><br>Senior Full stack Developer at Wipro Technologies</li>
-                        <li><span>2022 Febraury-2023 March</span><br>Full Stack developer at Wipro Technologies</li>
-                        <li><span>2021 November-2022 Febraury</span><br>Software Engineer</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id = "education">
-                    <ul>
-                        <li><span>2017 August - 2021 August</span><br>Bachelor of Technology (Major in CSE) at MVGR College of Engineering</li>
-                        <li><span>2015 June - 2017 May</span><br>Intermediate in MPC(Maths, Physics and Chemistry) at Ascent Junior College</li>
-                        <li><span>2014 June - 2015 May</span><br>Secondary Schooling at SFS High School</li>
-                    </ul>
-            </div>
-        </div>
-    </div>
 </div>
+</div>
+
+<!-------------------------- Exp mod  ----------------------------------------->
+<section class = "banner">
+    <div class="imgBx">
+        <video autoplay loop muted src = "images/ada2.mp4" class = " active"><source src="images/ad1.mp4" type="video/mp4"></video>
+        <video autoplay loop muted src = "images/ada4.mp4" class = ""><source src="images/ad2.mp4" type="video/mp4"></video>
+        <video autoplay loop muted src = "images/ada3.mp4" class = ""><source src="images/ad1.mp4" type="video/mp4"></video>
+        <video autoplay loop muted src = "images/chegg.mp4" class = ""><source src="images/ad2.mp4" type="video/mp4"></video>
+        <!-- <img src = "images/key1.jpg" alt = "" class = "active"/>
+        <img src = "images/img2.jpg" alt = ""/>
+        <img src = "images/img3.jpg" alt = ""/>
+        <img src = "images/batman1.jpg" alt = ""/>  -->
+    </div>
+    <div class="contentBx">
+        <div class = "active">
+            <h1 class = "first-slide" ><span class = "reddish">E</span>xperience<br/></h1>
+            <p class = "first-slide">(Use the buttons on right to navigate)</p>
+        </div>
+        <div>
+            <img class = "wiprologo" src = "images/wipro.png" alt == "wipro"/>
+            <h2>Full Stack Developer</h2>
+            <p>2022 December - Present<br/>
+                &#8226; Implemented scalable microservices, RESTful APIs, and server components using Spring, PostgreSQL, reducing API response times by 40%, achieving 99.9% uptime. 
+                <br/>&#8226;Expert in API integration, security, testing, and 
+                automation with Swagger, Postman, Junit, Cucumber.</p>
+                <a href="#">Details</a>
+            <!-- <div class = "for-pc"><p> </p></div>
+            <div class = "for-mobile">Responsibilities: &#8226; API's and Microservices implementation in Spring<br/>&#8226;API (Integration, security, testing)</div>
+            
+        </div> -->
+        </div>
+        <div>
+            <img class = "wiprologo" src = "images/wipro.png" alt == "wipro"/>
+            <h2>Front-end React Developer</h2>
+            <p>2022 Febraury - 2022 December<br/> &#8226; Developed UIs with React.js, Context API/Redux, Tailwind CSS resulting in a 30% lower bounce rate for site with more than 3L users.
+                <br/>&#8226; Collaborated, boosting user engagement by 25%, 
+                    customer satisfaction by 15%. Committed to high-quality, low-bug code.</p>
+            <a href="#">Details</a>
+        </div>
+        <div>
+            <img src = "https://upload.wikimedia.org/wikipedia/commons/c/ce/Chegg_logo.png" alt = "" style="width:120px;height:40px"/>
+            <h2>Mentor & Subject Matter Expert </h2>
+            <p>2023 April - Present <br/> &#8226; Member of Chegg as SME assisting SWE students in mastering
+                complex topics, providing clear explanations and guidance.
+                Ensuring and upholding academic integrity</p>
+            <a href="javascript:void(0)">Details</a>
+        </div>
+    </div>
+    <ul class="controls">
+        <li onclick="previousSlide();previousSlideText();"></li>
+        <li onclick="nextSlide();nextSlideText();"></li>
+    </ul>
+</section>
+    <!----------------------------------------------------- About ---------------------------------------->
+    <div id="about">
+        <div id="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src = "images/jana5.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class = "subtitle"><span class = "reddish">A</span>bout me</h1>
+                    <p>Java/ASP .NET Full Stack Developer experienced in developing interactive
+                        and live responsive web apps. Passionate to work and update skill grade with latest technology trends </p>
+                    <div class="tab-titles">
+                        <p class = "tab-links active-link" onclick="opentab('frontendskills')">Skills</p>
+                        <p class = "tab-links" onclick="opentab('cert')">Certifications</p>
+                        <p class = "tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id = "frontendskills">
+                        <ul>
+                            <li><span class = "head">&#8226; Programming, Scripting & Markup Languages</span></li>
+                            <li>Java, C#, Python, Javascript, Typescript, JSX, HTML5, Yaml and C.</li><br/>
+                            <li><span class = "head">&#8226; Frameworks/Libraries and Databases</span></li>
+                            <li>Backend: Spring Framework, ASP .NET Core Web API, Django, Express.js.</li>
+                            <li>Frontend: React.js, Redux Toolkit, Tailwind CSS, CSS3.</li><br/>
+                            <li><span class = "head">&#8226; Databases and others</span></li>
+                            <li>Databases : MySQL, MS-SQL Server, NoSQL(Cassandra, MongoDB).</li>
+                            <li>CI/CD Tools : AWS(Ec2, EKS), Jenkins, Docker and Git/BitBucket</li>
+                            <li>OS & Desktop env's : Linux dists(KDE, GNOME), Windows and MacOS.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id = "cert">
+                        <ul>
+                            <li><span class = "head">&#8226; CISCO CCNA Certifications</span> <a href = "https://drive.google.com/drive/u/0/folders/1vmP6wpqZwx2tD1afeQ_EBXiBi9ioAJME" target="_blank"><span class = "button"> Gdrive <i class="fa-brands fa-google-drive"></i></span></a>&nbsp; &nbsp; &nbsp; &nbsp; <a href="images/cisco.zip" download target="_blank"> <span class = "button"> Download <i class="fa-solid fa-download"></i></span></a><br>
+                            <ul><li>CCNAv7 Cybersecurity Essentials from Cisco</li> 
+                            <li>CCNAv7 duction to Networks from Cisco</li>
+                            <li>CCNAv7 Switching, Routing, and Wireless Essentials from Cisco</li>
+                            <li>CCNAv7 - Enterprise Networking, Security, and Automation from Cisco</li>
+                            <li>NDG Linux essentials certification endorsed by Cisco</li></ul>
+                        </ul>
+                        <ul><br/>
+                            
+                            <li><span class = "head">&#8226; IIT Madras Certification in Python</span><a href="images/python.pdf" download target="_blank"> <span class = "button"> Download <i class="fa-solid fa-download"></i></span></a></ul><br/>
+
+                            <ul><li><span class = "head">&#8226; Coding Platforms</span></li>
+                            <li>Hackerrank 3x Gold, Certified in SQL</li>
+                            <li>LeetCode 170+
+                            <li>Codechef Silver Badge</li>
+                        
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id = "education">
+                    <ul>
+                        <li><span class = "head">2017 August - 2021 August</span><br>Bachelor of Technology (Major in CSE) at MVGRCE, Vizianagarm</li>
+                        <progress id = "file" max = "100" value="70">70</progress><span class = "percent">Score: 70%</span>
+                        <li><span class = "head">2015 June - 2017 May</span><br>Intermediate in MPC at Ascent Junior College, Visakhapatnam</li>
+                        <progress id = "file" max = "100" value="94.8">94.8</progress><span class = "percent">Score: 94.8%</span>
+                        <li><span class = "head">2014 June - 2015 May</span><br>Secondary Schooling at SFS High School, Visakhapatnam</li>
+                        <progress id = "file" max = "100" value="95">95</progress><span class = "percent">CGPA: 9.5</span>
+                    </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+<!-- ------------------------------------------------- Experience -----------------------------------------
+<div id="experience">
+    <div class="container">
+        <h1 class = "subtitle"><span class = "reddish">E</span>xperience</h1>
+        <div class="exp-list">
+            <div>
+                <img class = "wiprologo" src = "images/wipro.png" alt == "wipro"/>
+                <br/>
+                <h2>Full Stack .Net Developer<br/> <span class = "loc">Bangalore, India</span><br/> <span class = "dates">March 2023-Present
+                </span></h2>
+                <p><ul>
+                    <li> Designed and implemented scalable microservices, RESTful APIs, and server-side components using Spring Boot, Spring MVC and PostgreSQL; </li>
+                    <li>optimized API response times by 40% through code refactoring, database query optimizations and achieved 99.9% service uptime</li>
+                    <li>Developed responsive and visually appealing UI’s using React.js, CSS, HTML, and Material UI; optimized website performance resulting in a 30% decrease in bounce rate and website load time, and a 20% increase in user retention</li>
+                    <li>Expertise in API integration, security implementation, testing, and automation with Swagger, Postman, Junit, and Cucumber</li>
+                    <li> Collaborative team player with expertise in agile, development methodologies, CI/CD, UX designers and cloud platforms(AWS)</li>
+                    <li>Collaborated with cross-functional teams to optimize UI/UX, resulting in a 25% increase in user engagement and a 15% boost in
+                        customer satisfaction. ndustry-savvy software developer committed to high-quality, low-bug code..</li>
+                </ul> 
+            </div>
+        </div>    
+    </div>
+</div> -->
 
 <!---------------------------------------------------- services ------------------------------------------------>
 
@@ -487,33 +193,32 @@ nav .fa-solid{
         <h1 class = "subtitle"><span class = "reddish">S</span>ervices</h1>
         <div class="services-list">
             <div>
-                <i class="fa-solid fa-crop-simple fa-flip"></i>
-                <br/>
-                <h2>Front-end development</h2>
-                <p>"Explore our front-end development services for stunning website experiences. 
-                    We craft visually appealing, user-friendly designs to elevate your online presence.
-                     Let's bring your vision to life!"</p>
-                <a href = "#">Learn More</a>
-            </div>
-            <div>
                 <i class="fa-sharp fa-solid fa-code fa-flip"></i>
                 <br/>
-                <h2>Mobile App development</h2>
-                <p>"Unlock limitless possibilities with our cross-platform mobile app development using React Native! 🚀 Elevate your business with a stunning app starting at just 7999. Let's bring your vision to life together!"
-                </p>
-                <a href = "#">Learn More</a>
-            </div>
+                <h2>Web and Mobile App development</h2>
+                <p>"If you like my designs.
+                    We craft fully functional web and mobile apps on weekends for your businesses to elevate your online presence."</p>
+                <a href = "#">Learn more/Pay (Coming Soon)</a><br/>
+                <a href = "#contact">Contact Us</a>
 
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple fa-flip"></i>
+                <br/>
+                <h2>For People in Web 3.0 & Generative AI</h2>
+                <p>We are looking to connect with people having experience in Web 3.0 technologies like Blockchain (especially Polkadot & Substrate) and NFT's.</p>
+                <a href = "#">Learn more(Coming Soon)</a><br/>
+                <a href = "#contact"> Let's Connect</a>
+            </div>
             <div>
                 <i class="fa-brands fa-app-store fa-flip"></i>
                 <br/>
-                <h2>Portfolio Making</h2>
-                <p>"Explore our portfolio service! Get a stunning website + hosting on GoDaddy for 6 months at just 2999 rupees. Elevate your online presence today!"</p>
-                <a href = "#">Learn More</a>
+                <h2>Launching my React Course Soon</h2>
+                <p>"Gladly I'm launching my 'Reactv18 + CSS3' Course (Video Course + Readable Content) soon on this website. Thank you for your attention" 
+                </p>
+                <a href = "#">Buy Course(Coming Soon)</a><br/>
+                <a href = "#">Learn more (Coming Soon)</a><br/>
             </div>
-
-
-
         </div>
     </div>
 </div>
@@ -522,37 +227,47 @@ nav .fa-solid{
 
 <div id="work">
     <div class="container">
-        <h1 class = "subtitle"><span class = "reddish">W</span>ork</h1>
+        <h1 class = "subtitle"><span class = "reddish">P</span>rojects</h1>
         <div class="work-list">
             <div class="work">
-                <img class = "work-pic" src = "images/worka4.jpg"/>
+                <img class = "work-pic" src = "images/final1.jpg"/>
                 <div class="layer">
-                    <h2>Electric</h2>
-                    <h3>Dating Website that helps you to date new friends near you </h3>
-                    <p>Technologies Used: React, Spring Boot, MySQL, GraphQL</p>
-                    <a href = "#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <h2>DumbRoll</h2>
+                    <h3>"A Video Streaming website for binge-worthy content."</h3>
+                    <p>Technologies Used: React.js v18, MaterialUI v5, RapidAPI, Firebase</p>
+                    <a href = "https://dumbroll-entertainment.web.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
-                <img class = "work-pic" src = "images/worka1.jpg"/>
+                <img class = "work-pic" src = "images/final2.jpg"/>
                 <div class="layer">
-                    <h2>Flexter</h2>
-                    <h3>App to connect with nearest gyms, trainers and Gym Supplement Stores</h3>
-                    <p>Technologies Used: React, Django, NoSQL, GraphQL</p>
+                    <h2>BeatBox</h2>
+                    <h3>"Web app with seamless and immersive music streaming experience."</h3>
+                    <p>Tech Stack: React, Redux, Tailwind, Shazam & Geolocation API</p>
                     <a href = "#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
-            <div class="work">
-                <img class = "work-pic" src = "images/woeka3.jpg"/>
+            <!-- <div class="work">
+                <img class = "work-pic" src = "images/"/>
                 <div class="layer">
-                    <h2>GoMarry.com</h2>
-                    <h3>App to order services for marriages, parties from nearest event organizers</h3>
-                    <p>Technologies Used: React Native, Django, , GraphQL</p>
+                    <h2>Chatgpt</h2>
+                    <h3>"Conversational AI experiences with ChatGPT clone."</h3>
+                    <p>React.js, , CSS3, OpenAI API</p>
+                    <a href = "#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div> -->
+            <div class="work">
+                <img class = "work-pic" src = "images/uber1.jpg"/>
+                <div class="layer">
+                    <h2>Uber Clone</h2>
+                    <h3>"React Native app for effortless transportation in and across the cities"</h3>
+                    <p>Tech Stack: React Native, Redux, Tailwind</p>
                     <a href = "#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
-        <a href = "#" class = "btn">See more</a>
+        <a href = "javascript:void(0)" class = "btn" onclick="message()">See more</a>
+        <span id ="msg2"></span>
     </div>
 </div>
 
@@ -562,22 +277,26 @@ nav .fa-solid{
         <div class="row">
             <div class="contact-left">
                 <h1 class = "subtitle"><span class = "reddish">C</span>ontact</h1>
-                <p><i class="fa-solid fa-paper-plane"></i>   janardhanykunta616@gmail.com</p>
-                <p><i class="fa-solid fa-phone fa-shake"></i> +91-9398272406</p>
+                <div class="contx">
+                    <a style="display: flex; flex-direction: row; text-decoration: none; padding-bottom: 20px;;" href = "mailto:janardhanykunta616@gmail.com" target = "_blank"><i class="fa-solid fa-paper-plane fa-shake" style="margin-top: 6px; padding-top: 14px;"></i><p style="text-decoration: none; color: white;">Gmail</p></a>
+                <a href="tel:+91-9398272406" style = "text-decoration: none; color: white; padding-top: 30px;"><i class="fa-solid fa-phone fa-shake"></i> +91-9398272406</a>
+                </div>
                 <div class="social-icons">
-                    <a href = "#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href = "#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href = "#"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href = "#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href = "https://github.com/janykn" target = "_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href = "https://www.instagram.com/ykunta._/" target = "_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href = "https://twitter.com/JYkunta" target = "_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href = "https://www.linkedin.com/in/ykunta-janardhan-rao-sarvasiddi-598423183/" target = "_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <a href = "images/Resume.pdf" download class = "btn btn2">Download Resume</a>
             </div>
             <div class="contact-right">
                <form name = "submit-to-google-sheet">
-                <input type="text" id="name" name="name" placeholder = "Your Name" required><br><br>
-                <input type="email" id="email" name="email" placeholder = "Your Email" required><br><br>
+                <div class = "inputbox">
+                    <input type="text" id="name" name="name" required><span>Name</span><br>
+                <input type="email" id="email" name="email" required><span>Email</span><br>
                 <!-- <label for="message">Message:</label> -->
-                <textarea id="message" name="message" rows="4" placeholder = "Your Message" required></textarea><br><br>
+                <textarea id="message" name="message" rows="4" required></textarea><span>Message</span><br><br>
+                </div>
                 <button type=""submit" class ="btn btn2">Submit</button>
             </form>
             <span id ="msg"></span>
@@ -588,51 +307,17 @@ nav .fa-solid{
         <p> Copyright &copy; 2023. Made with <i class="fa-solid fa-heart" style="color: #ff001f;"></i> by Janardhan Ykunta</p>
     </div>
 </div>
+</div>
 
+<script type = "text/javascript" src="index.js"></script>
+<script src="script.js"></script>
+<script type="text/javascript" src="vanilla-tilt.js"></script>
 <script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link")
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab")
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab")
-    }
+    VanillaTilt.init(document.querySelectorAll(".cards"), {
+		max: 25,
+		speed: 400
+	});
 </script>
-
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-190px";
-    }
-</script>
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyaPd29DDNhBjK5s-5v2agEj5wtFJSz4umYNCPODHsugTYCiN_E6Ie1YfiVLjqLxWygsg/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML="Thank you for your valuable response" 
-            setTimeout(function(){
-            msg.innerHTML=""
-        },5000)
-    form.reset()
-})
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-
 </body>
 
 </html>

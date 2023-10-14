@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/wolf.png" type="image/x-icon">
     <title>Janykn Portfolio</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,13 +25,14 @@ html{
 }
 
 body{
-    background: #080808;
+    background: #000000;
+    /* background-color: #2A2A34; */
     color:#fff;
 }
-#header{
+#header{   
     width: 100%;
     height: 100vh;
-    background-image: url(images/bg3.jpg);
+    background-image: url(images/jpl78.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -40,15 +42,31 @@ body{
 .container{
     padding:10px 10%;
 }
-nav{
+/* nav{
+    background-color:#080808;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-}
+    position:sticky !important;
+    top:0 !important;
+    z-index:100 !important;
+} */
+nav {
+            position: fixed;
+            top: 0;
+            background-color: #000000;
+            width:100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            z-index: 1000;
+        }
 .logo{
     width:190px;
-    height:45px;
+    margin-left: 50px;
+    margin-right:780px;
 }
 nav ul li{
     display: inline-block;
@@ -201,6 +219,17 @@ nav ul li a:hover::after{
 .services-list div:hover{
     background: #ff004f;
     transform:translateY(-15px);
+    color:black;
+}
+.services-list div a:hover{
+    padding: 10px 20px;
+    background-color: white;
+    color:black;
+
+}
+.services-list div p{
+    padding-top:4px;
+    padding-bottom: 15px;
 }
 /* portfolio */
 #portfolio{
@@ -247,8 +276,8 @@ nav ul li a:hover::after{
     font-weight:500;
     /* margin-bottom:20px; */
 }
-.layer a{
-    margin-top: 20px;
+.layer a .fa-solid{
+    margin-top: 10px;
     color:#ff004f;
     text-decoration: none;
     font-size: 18px;
@@ -259,6 +288,28 @@ nav ul li a:hover::after{
     border-radius: 50%;
     text-align: center;
 }
+
+.gitlink a{
+    margin-top: 10px;
+    color:#ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 200px;
+    height: 30px;
+}
+/* .layer a .fa-brands{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color:black;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 50px;
+    background: #ff004f;
+    width: 80px;
+    text-align: center;
+} */
 .work:hover img{
     transform: scale(1.1);
 
@@ -279,6 +330,13 @@ nav ul li a:hover::after{
 }
 .btn:hover{
     background-color: #ff004f;
+}
+#msg2{
+    margin-left:50%;
+    color:#ff004f;
+    margin-top:-40px;
+    display:block;
+
 }
 
 /* ---------------------------------contact------------------------------------------------ */
@@ -353,9 +411,44 @@ nav .fa-solid{
     display:none;
 }
 
+/* nav {
+            position: fixed;
+            top: 0;
+            background-color: #080808;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            z-index: 1000;
+        }
+.logo{
+    width:190px;
+    height:45px;
+    margin-left: 50px;
+    margin-right:750px;
+} */
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/bg4.jpg);
+        background-image: url(images/bgph1.jpg);
+    }
+    .logo{
+        margin-top:18px;
+        margin-left: 5px;
+        margin-right:30px;
+    }
+    nav .fa-solid .fa-bars{
+        top:0;
+        display:block;
+        position:relative;
+        margin-right: 5vw;
+        padding-right: 5vw;
+    }
+    nav{
+        top:0;
+        background-color:#080808;
+        width:100%;
+        position:fixed;
+        z-index:10000;
     }
     .header-text{
         margin-top: 100%;
@@ -364,10 +457,12 @@ nav .fa-solid{
     .header-text h1{
         font-size:30px;
     }
-    nav .fa-solid{
-        display:block;
-        font-size: 25px;
-    }
+nav .fa-solid {
+    display: block;
+    font-size: 25px;
+    padding-top: 4vw;
+    padding-right: 14vw;
+}
     nav ul{
         background: #262626;
         position: fixed;
@@ -402,11 +497,15 @@ nav .fa-solid{
         font-size: 14px;
     }
 
+
     .tab-links{
         font-size:16px;
         margin-right:20px;
     }
-    .work, .services-list, .contact-left, .contact-right{
+    .services-list div{
+        margin-right:20px;
+    }
+    .work, .contact-left, .contact-right{
         flex-basis: 100%;
     }
     .copyright{
@@ -419,19 +518,19 @@ nav .fa-solid{
 
 <body>
     <div id="header">
+        <nav>
+            <a href = "#header"><img src="images/Janardhan-2.png" alt="logo" class="logo" /></a>
+            <ul id = "sidemenu">
+                <li><a href = "#header">Home</a></li>
+                <li><a href = "#about">About</a></li>
+                <li><a href = "#services">Services</a></li>
+                <li><a href = "#work">Work</a></li>
+                <li><a href = "#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick = "closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick = "openmenu()"></i>
+        </nav>
         <div class="container">
-            <nav>
-                <img src="images/Janardhan-2.png" alt="logo" class="logo" />
-                <ul id = "sidemenu">
-                    <li><a href = "#header">Home</a></li>
-                    <li><a href = "#about">About</a></li>
-                    <li><a href = "#services">Services</a></li>
-                    <li><a href = "#work">Work</a></li>
-                    <li><a href = "#contact">Contact</a></li>
-                    <i class="fa-solid fa-xmark" onclick = "closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick = "openmenu()"></i>
-            </nav>
                 <div class="header-text">
                     <p>Full-Stack Java/.NET Developer</p>
                     <h1>Hey, This is <span class="reddish">Janardhan</span> from <br/>Hyderabad, India</h1>
@@ -439,46 +538,46 @@ nav .fa-solid{
         </div>
     </div>
     <!----------------------------------------------------- About ---------------------------------------->
-<div id="about">
-    <div id="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src = "images/about2.jpg">
-            </div>
-            <div class="about-col-2">
-                <h1 class = "subtitle"><span class = "reddish">A</span>bout me</h1>
-                <p>MEAN, MERN Full Stack Developer experienced in developing interactive
-                    and live responsive web apps. Passionate to work and update skill grade with latest technology trends </p>
-                <div class="tab-titles">
-                    <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class = "tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class = "tab-links" onclick="opentab('education')">Education</p>
+    <div id="about">
+        <div id="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src = "images/ab32.jpg">
                 </div>
-                <div class="tab-contents active-tab" id = "skills">
-                    <ul>
-                        <li><span>Java/ASP .NET/Express.js/Django</span><br>Back-end Development</li>
-                        <li><span>React.js, Tailwind CSS</span><br>Front-end Development</li>
-                        <li><span>MySQL, MS-SQL Server, NoSQL(MongoDB), AWS RDS</span><br>Databases I've worked with</li>
-                        <li><span>Git, Docker, Jenkins, AWS(Ec2, EKS)</span><br>Continous Integration/Continous Deployment</li>
-                    </ul>
+                <div class="about-col-2">
+                    <h1 class = "subtitle"><span class = "reddish">A</span>bout me</h1>
+                    <p>Java/ASP .NET Full Stack Developer experienced in developing interactive
+                        and live responsive web apps. Passionate to work and update skill grade with latest technology trends </p>
+                    <div class="tab-titles">
+                        <p class = "tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class = "tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class = "tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id = "skills">
+                        <ul>
+                            <li><span>Java(Spring Boot), C# (ASP .NET), Django/Express.js</span><br>Back-end Development</li>
+                            <li><span>React.js, Redux Toolkit, Tailwind CSS, CSS3</span><br>Front-end Development</li>
+                            <li><span>MySQL, MS-SQL Server, AWS DynamoDB, NoSQL(MongoDB)</span><br>Databases I've worked with</li>
+                            <li><span>Git, Docker, Jenkins, AWS(Ec2, EKS)</span><br>Continous Integration/Continous Deployment</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id = "experience">
+                        <ul>
+                            <li><span>2023 March - Present</span><br>Full-Stack .NET Developer(Project Engineer) at Wipro Technologies</li>
+                            <li><span>2022 Febraury-2023 March</span><br>Front-End Developer(Software Engineer) at Wipro Technologies</li>
+                            <li><span>2021 November-2022 Febraury</span><br>Project Trainee at Wipro Technologies</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id = "education">
+                        <ul>
+                            <li><span>2017 August - 2021 August</span><br>Bachelor of Technology (Major in CSE) at MVGR College of Engineering</li>
+                            <li><span>2015 June - 2017 May</span><br>Intermediate in MPC(Maths, Physics and Chemistry) at Ascent Junior College</li>
+                            <li><span>2014 June - 2015 May</span><br>Secondary Schooling at SFS High School</li>
+                        </ul>
                 </div>
-                <div class="tab-contents" id = "experience">
-                    <ul>
-                        <li><span>2023 March - Present</span><br>Senior Full stack Developer at Wipro Technologies</li>
-                        <li><span>2022 Febraury-2023 March</span><br>Full Stack developer at Wipro Technologies</li>
-                        <li><span>2021 November-2022 Febraury</span><br>Software Engineer</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id = "education">
-                    <ul>
-                        <li><span>2017 August - 2021 August</span><br>Bachelor of Technology (Major in CSE) at MVGR College of Engineering</li>
-                        <li><span>2015 June - 2017 May</span><br>Intermediate in MPC(Maths, Physics and Chemistry) at Ascent Junior College</li>
-                        <li><span>2014 June - 2015 May</span><br>Secondary Schooling at SFS High School</li>
-                    </ul>
             </div>
         </div>
     </div>
-</div>
 
 <!---------------------------------------------------- services ------------------------------------------------>
 
@@ -487,36 +586,36 @@ nav .fa-solid{
         <h1 class = "subtitle"><span class = "reddish">S</span>ervices</h1>
         <div class="services-list">
             <div>
-                <i class="fa-solid fa-crop-simple fa-flip"></i>
-                <br/>
-                <h2>Front-end development</h2>
-                <p>"Explore our front-end development services for stunning website experiences. 
-                    We craft visually appealing, user-friendly designs to elevate your online presence.
-                     Let's bring your vision to life!"</p>
-                <a href = "#">Learn More</a>
-            </div>
-            <div>
                 <i class="fa-sharp fa-solid fa-code fa-flip"></i>
                 <br/>
-                <h2>Mobile App development</h2>
-                <p>"Unlock limitless possibilities with our cross-platform mobile app development using React Native! 🚀 Elevate your business with a stunning app starting at just 7999. Let's bring your vision to life together!"
-                </p>
-                <a href = "#">Learn More</a>
-            </div>
+                <h2>Web and Mobile App development</h2>
+                <p>"If you like my designs.
+                    We craft fully functional web and mobile apps on weekends for your businesses to elevate your online presence."</p>
+                <a href = "#">Learn more/Pay (Coming Soon)</a><br/>
+                <a href = "#contact">Contact Us</a>
 
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple fa-flip"></i>
+                <br/>
+                <h2>For People in Web 3.0 & Generative AI</h2>
+                <p>We are looking to connect with people having experience in Web 3.0 technologies like Blockchain (especially Polkadot & Substrate) and NFT's.</p>
+                <a href = "#">Learn more(Coming Soon)</a><br/>
+                <a href = "#contact"> Let's Connect</a>
+            </div>
             <div>
                 <i class="fa-brands fa-app-store fa-flip"></i>
                 <br/>
-                <h2>Portfolio Making</h2>
-                <p>"Explore our portfolio service! Get a stunning website + hosting on GoDaddy for 6 months at just 2999 rupees. Elevate your online presence today!"</p>
-                <a href = "#">Learn More</a>
+                <h2>Launching my React Course Soon</h2>
+                <p>"Gladly I'm launching my 'Reactv18 + CSS3' Course (Video Course + Readable Content) soon on this website. Thank you for your attention" 
+                </p>
+                <a href = "#">Buy Course(Coming Soon)</a><br/>
+                <a href = "#">Learn more (Coming Soon)</a><br/>
             </div>
-
-
-
         </div>
     </div>
 </div>
+
 
 <!--------------------------------------- portfolio ------------------------------------>
 
@@ -525,34 +624,44 @@ nav .fa-solid{
         <h1 class = "subtitle"><span class = "reddish">W</span>ork</h1>
         <div class="work-list">
             <div class="work">
-                <img class = "work-pic" src = "images/worka4.jpg"/>
+                <img class = "work-pic" src = "images/final1.jpg"/>
                 <div class="layer">
-                    <h2>Electric</h2>
-                    <h3>Dating Website that helps you to date new friends near you </h3>
-                    <p>Technologies Used: React, Spring Boot, MySQL, GraphQL</p>
-                    <a href = "#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <h2>DumbRoll</h2>
+                    <h3>"A Video Streaming website for binge-worthy content."</h3>
+                    <p>Technologies Used: React.js v18, MaterialUI v5, RapidAPI, Firebase</p>
+                    <a href = "https://dumbroll-entertainment.web.app/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
-                <img class = "work-pic" src = "images/worka1.jpg"/>
+                <img class = "work-pic" src = "images/final2.jpg"/>
                 <div class="layer">
-                    <h2>Flexter</h2>
-                    <h3>App to connect with nearest gyms, trainers and Gym Supplement Stores</h3>
-                    <p>Technologies Used: React, Django, NoSQL, GraphQL</p>
+                    <h2>BeatBox</h2>
+                    <h3>"Web app with seamless and immersive music streaming experience."</h3>
+                    <p>Tech Stack: React, Redux, Tailwind, Shazam & Geolocation API</p>
                     <a href = "#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
-            <div class="work">
-                <img class = "work-pic" src = "images/woeka3.jpg"/>
+            <!-- <div class="work">
+                <img class = "work-pic" src = "images/"/>
                 <div class="layer">
-                    <h2>GoMarry.com</h2>
-                    <h3>App to order services for marriages, parties from nearest event organizers</h3>
-                    <p>Technologies Used: React Native, Django, , GraphQL</p>
+                    <h2>Chatgpt</h2>
+                    <h3>"Conversational AI experiences with ChatGPT clone."</h3>
+                    <p>React.js, , CSS3, OpenAI API</p>
+                    <a href = "#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div> -->
+            <div class="work">
+                <img class = "work-pic" src = "images/uber1.jpg"/>
+                <div class="layer">
+                    <h2>Uber Clone</h2>
+                    <h3>"React Native app for effortless transportation in and across the cities"</h3>
+                    <p>Tech Stack: React Native, Redux, Tailwind</p>
                     <a href = "#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
-        <a href = "#" class = "btn">See more</a>
+        <a href = "javascript:void(0)" class = "btn" onclick="message()">See more</a>
+        <span id ="msg2"></span>
     </div>
 </div>
 
@@ -562,7 +671,7 @@ nav .fa-solid{
         <div class="row">
             <div class="contact-left">
                 <h1 class = "subtitle"><span class = "reddish">C</span>ontact</h1>
-                <p><i class="fa-solid fa-paper-plane"></i>   janardhanykunta616@gmail.com</p>
+                <p><i class="fa-solid fa-paper-plane"></i>janardhanykunta616@gmail.com</p>
                 <p><i class="fa-solid fa-phone fa-shake"></i> +91-9398272406</p>
                 <div class="social-icons">
                     <a href = "#"><i class="fa-brands fa-facebook"></i></a>
@@ -632,7 +741,53 @@ nav .fa-solid{
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+  <script>
+    function message(){
+        document.getElementById("msg2").innerHTML = "More projects coming soon... Stay Tuned";
+        setTimeout(function() {
+            document.getElementById("msg2").innerHTML = "";
+        }, 1000);
+    }
+  </script>
 
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </body>
 
 </html>

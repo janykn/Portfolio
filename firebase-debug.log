@@ -1,13 +1,14 @@
-[debug] [2023-09-20T09:15:35.279Z] ----------------------------------------------------------------------
-[debug] [2023-09-20T09:15:35.284Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\janar\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
-[debug] [2023-09-20T09:15:35.285Z] CLI Version:   12.5.4
-[debug] [2023-09-20T09:15:35.286Z] Platform:      win32
-[debug] [2023-09-20T09:15:35.286Z] Node Version:  v18.17.1
-[debug] [2023-09-20T09:15:35.288Z] Time:          Wed Sep 20 2023 14:45:35 GMT+0530 (India Standard Time)
-[debug] [2023-09-20T09:15:35.289Z] ----------------------------------------------------------------------
+[debug] [2023-09-21T16:48:07.436Z] ----------------------------------------------------------------------
+[debug] [2023-09-21T16:48:07.464Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\janar\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2023-09-21T16:48:07.471Z] CLI Version:   12.5.4
+[debug] [2023-09-21T16:48:07.477Z] Platform:      win32
+[debug] [2023-09-21T16:48:07.480Z] Node Version:  v18.17.1
+[debug] [2023-09-21T16:48:07.491Z] Time:          Thu Sep 21 2023 22:18:07 GMT+0530 (India Standard Time)
+[debug] [2023-09-21T16:48:07.494Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2023-09-20T09:15:35.314Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-09-20T09:15:35.317Z] > authorizing via signed-in user (janardhanykunta616@gmail.com)
+[debug] [2023-09-21T16:48:07.546Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-09-21T16:48:09.702Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-09-21T16:48:09.707Z] > authorizing via signed-in user (janardhanykunta616@gmail.com)
 [info] 
      ######## #### ########  ######## ########     ###     ######  ########
      ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
@@ -19,44 +20,71 @@ You're about to initialize a Firebase project in this directory:
 
   D:\Portfolio
 
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2023-09-21T16:48:10.880Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-09-21T16:48:10.887Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-09-23T21:05:14.485Z] ----------------------------------------------------------------------
+[debug] [2023-09-23T21:05:14.489Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\janar\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2023-09-23T21:05:14.489Z] CLI Version:   12.5.4
+[debug] [2023-09-23T21:05:14.490Z] Platform:      win32
+[debug] [2023-09-23T21:05:14.490Z] Node Version:  v18.17.1
+[debug] [2023-09-23T21:05:14.491Z] Time:          Sun Sep 24 2023 02:35:14 GMT+0530 (India Standard Time)
+[debug] [2023-09-23T21:05:14.492Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-09-23T21:05:14.498Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-09-23T21:05:14.661Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-09-23T21:05:14.661Z] > authorizing via signed-in user (janardhanykunta616@gmail.com)
+[debug] [2023-09-23T21:05:14.662Z] [iam] checking project janykn-6bbe8 for permissions ["firebase.projects.get"]
+[debug] [2023-09-23T21:05:14.663Z] > refreshing access token with scopes: []
+[debug] [2023-09-23T21:05:14.665Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-09-23T21:05:14.665Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-09-23T21:05:14.862Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-09-23T21:05:14.862Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-09-23T21:05:14.871Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/janykn-6bbe8:testIamPermissions [none]
+[debug] [2023-09-23T21:05:14.871Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/janykn-6bbe8:testIamPermissions x-goog-quota-user=projects/janykn-6bbe8
+[debug] [2023-09-23T21:05:14.871Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/janykn-6bbe8:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-09-23T21:05:15.307Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-09-23T21:05:15.307Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-09-23T21:05:16.291Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/janykn-6bbe8:testIamPermissions 200
+[debug] [2023-09-23T21:05:16.292Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/janykn-6bbe8:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-09-23T21:05:16.294Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/janykn-6bbe8 [none]
+[debug] [2023-09-23T21:05:16.981Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/janykn-6bbe8 200
+[debug] [2023-09-23T21:05:16.981Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/janykn-6bbe8 {"projectId":"janykn-6bbe8","projectNumber":"435495814614","displayName":"Janykn","name":"projects/janykn-6bbe8","resources":{"hostingSite":"janykn-6bbe8"},"state":"ACTIVE","etag":"1_1dcc31e9-ef91-47c5-9ee3-2ec0989405d2"}
 [info] 
-=== Project Setup
+[info] === Serving from 'D:\Portfolio'...
 [info] 
-[info] First, let's associate this project directory with a Firebase project.
-[info] You can create multiple project aliases by running firebase use --add, 
-[info] but for now we'll just set up a default project.
-[info] 
-[debug] [2023-09-20T09:15:56.934Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
-[debug] [2023-09-20T09:15:58.679Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
-[debug] [2023-09-20T09:15:58.679Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
-[info] i  Using project janykn-6bbe8 (Janykn) 
-[info] 
-=== Hosting Setup
-[info] 
-[info] Your public directory is the folder (relative to your project directory) that
-[info] will contain Hosting assets to be uploaded with firebase deploy. If you
-[info] have a build process for your assets, use your build's output directory.
-[info] 
-[info] +  Wrote Portfolio/404.html 
-[debug] [2023-09-20T09:18:22.579Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
-[debug] [2023-09-20T09:18:22.755Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
-[debug] [2023-09-20T09:18:22.756Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.4.0","browserURL":"https://www.gstatic.com/firebasejs/10.4.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.4.0/firebase.tgz"},"live":{"version":"10.4","browserURL":"https://www.gstatic.com/firebasejs/live/10.4/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.4/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.4.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.4.0/firebase-auth/cordova.js","functions":"https://www.gstatic.com/firebasejs/10.4.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.4.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.4.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.4.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.4.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.4.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.4.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.memory.js"}}
-[info] +  Wrote Portfolio/index.html 
-[info] 
-[info] i  Didn't detect a .git folder. Assuming D:\Portfolio is the project root. 
-[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
-[info] 
-[info] Visit this URL on this device to log in:
-[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=802579432&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
-[info] 
-[info] Waiting for authentication...
-[debug] [2023-09-20T09:19:32.588Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
-[debug] [2023-09-20T09:19:32.589Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
-[debug] [2023-09-20T09:19:32.975Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
-[debug] [2023-09-20T09:19:32.975Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
-[debug] [2023-09-20T09:19:33.001Z] >>> [apiv2][query] GET https://api.github.com/user [none]
-[debug] [2023-09-20T09:19:33.451Z] <<< [apiv2][status] GET https://api.github.com/user 200
-[debug] [2023-09-20T09:19:33.451Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"janykn","id":68185366,"node_id":"MDQ6VXNlcjY4MTg1MzY2","avatar_url":"https://avatars.githubusercontent.com/u/68185366?v=4","gravatar_id":"","url":"https://api.github.com/users/janykn","html_url":"https://github.com/janykn","followers_url":"https://api.github.com/users/janykn/followers","following_url":"https://api.github.com/users/janykn/following{/other_user}","gists_url":"https://api.github.com/users/janykn/gists{/gist_id}","starred_url":"https://api.github.com/users/janykn/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/janykn/subscriptions","organizations_url":"https://api.github.com/users/janykn/orgs","repos_url":"https://api.github.com/users/janykn/repos","events_url":"https://api.github.com/users/janykn/events{/privacy}","received_events_url":"https://api.github.com/users/janykn/received_events","type":"User","site_admin":false,"name":"Janardhan Ykunta","company":null,"blog":"","location":"India","email":null,"hireable":null,"bio":"Full Stack Dev • Mentor at Chegg • React(js/ts) | .NET Core/Spring Boot/ Django | SQL(MS/My) | CI/CD","twitter_username":null,"public_repos":14,"public_gists":0,"followers":0,"following":0,"created_at":"2020-07-12T10:26:44Z","updated_at":"2023-09-10T03:31:48Z","private_gists":0,"total_private_repos":3,"owned_private_repos":3,"disk_usage":230713,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
-[info] 
-[info] +  Success! Logged into GitHub as janykn 
-[info] 
+[debug] [2023-09-23T21:05:17.000Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/janykn-6bbe8/sites 
+[debug] [2023-09-23T21:05:18.065Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/janykn-6bbe8/sites 200
+[debug] [2023-09-23T21:05:18.065Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/janykn-6bbe8/sites {"sites":[{"name":"projects/janykn-6bbe8/sites/janykn-6bbe8","defaultUrl":"https://janykn-6bbe8.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-09-23T21:05:18.066Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/janykn-6bbe8/webApps/-/config [none]
+[debug] [2023-09-23T21:05:19.140Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/janykn-6bbe8/webApps/-/config 200
+[debug] [2023-09-23T21:05:19.141Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/janykn-6bbe8/webApps/-/config {"projectId":"janykn-6bbe8","storageBucket":"janykn-6bbe8.appspot.com","apiKey":"AIzaSyDKQwxBjbDplxM-Rsod6I-e9qo36L-k93o","authDomain":"janykn-6bbe8.firebaseapp.com","messagingSenderId":"435495814614"}
+[debug] [2023-09-23T21:05:19.157Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/janykn-6bbe8 [none]
+[debug] [2023-09-23T21:05:19.828Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/janykn-6bbe8 200
+[debug] [2023-09-23T21:05:19.829Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/janykn-6bbe8 {"projectId":"janykn-6bbe8","projectNumber":"435495814614","displayName":"Janykn","name":"projects/janykn-6bbe8","resources":{"hostingSite":"janykn-6bbe8"},"state":"ACTIVE","etag":"1_1dcc31e9-ef91-47c5-9ee3-2ec0989405d2"}
+[info] i  hosting[janykn-6bbe8]: Serving hosting files from: Portfolio {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mPortfolio\u001b[22m"}}
+[info] +  hosting[janykn-6bbe8]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:48 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:48 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:48 +0000] "GET /style.css HTTP/1.1" 404 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:48 +0000] \"GET /style.css HTTP/1.1\" 404 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:48 +0000] "GET /index.js HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:48 +0000] \"GET /index.js HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:48 +0000] "GET /script.js HTTP/1.1" 404 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:48 +0000] \"GET /script.js HTTP/1.1\" 404 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:48 +0000] "GET /vanilla-tilt.js HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:48 +0000] \"GET /vanilla-tilt.js HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:48 +0000] "GET /images/Janardhan-2.png HTTP/1.1" 200 8118 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:48 +0000] \"GET /images/Janardhan-2.png HTTP/1.1\" 200 8118 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:48 +0000] "GET /images/wipro.png HTTP/1.1" 404 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:48 +0000] \"GET /images/wipro.png HTTP/1.1\" 404 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:48 +0000] "GET /images/jana5.jpg HTTP/1.1" 404 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:48 +0000] \"GET /images/jana5.jpg HTTP/1.1\" 404 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:48 +0000] "GET /images/final1.jpg HTTP/1.1" 200 83799 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:48 +0000] \"GET /images/final1.jpg HTTP/1.1\" 200 83799 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:48 +0000] "GET /images/final2.jpg HTTP/1.1" 200 62119 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:48 +0000] \"GET /images/final2.jpg HTTP/1.1\" 200 62119 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:48 +0000] "GET /images/uber1.jpg HTTP/1.1" 200 3560801 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:48 +0000] \"GET /images/uber1.jpg HTTP/1.1\" 200 3560801 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:48 +0000] "GET /images/aboutfinal.jpg HTTP/1.1" 200 325952 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:48 +0000] \"GET /images/aboutfinal.jpg HTTP/1.1\" 200 325952 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:49 +0000] "GET /images/wipro.png HTTP/1.1" 404 - "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:49 +0000] \"GET /images/wipro.png HTTP/1.1\" 404 - \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:49 +0000] "GET //ws HTTP/1.1" 404 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:49 +0000] \"GET //ws HTTP/1.1\" 404 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:49 +0000] "GET /images/ada2.mp4 HTTP/1.1" 404 1808 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:49 +0000] \"GET /images/ada2.mp4 HTTP/1.1\" 404 1808 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:49 +0000] "GET /images/ada4.mp4 HTTP/1.1" 404 1808 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:49 +0000] \"GET /images/ada4.mp4 HTTP/1.1\" 404 1808 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:49 +0000] "GET /images/ada3.mp4 HTTP/1.1" 404 1808 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:49 +0000] \"GET /images/ada3.mp4 HTTP/1.1\" 404 1808 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:49 +0000] "GET /images/ad6.mp4 HTTP/1.1" 404 1808 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:49 +0000] \"GET /images/ad6.mp4 HTTP/1.1\" 404 1808 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:49 +0000] "GET //ws HTTP/1.1" 404 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:49 +0000] \"GET //ws HTTP/1.1\" 404 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:49 +0000] "GET /images/jpl78.jpg HTTP/1.1" 200 2039076 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:49 +0000] \"GET /images/jpl78.jpg HTTP/1.1\" 200 2039076 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
+[info] i  hosting: ::1 - - [23/Sep/2023:21:05:49 +0000] "GET /images/wolf.png HTTP/1.1" 200 8735 "http://localhost:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [23/Sep/2023:21:05:49 +0000] \"GET /images/wolf.png HTTP/1.1\" 200 8735 \"http://localhost:5000/\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\""}}
